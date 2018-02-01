@@ -1,10 +1,13 @@
 <?php
+
+namespace HTMEl;
+
 class div extends ContainerComponent {
     function name() {
         return "div";
     }
 }
 
-function div(array $args = [],...$children) {
-    return new div($args, ...$children);
+function div(array $attributes = [], Block ...$children) {
+    return new div($attributes, ...$children);
 }

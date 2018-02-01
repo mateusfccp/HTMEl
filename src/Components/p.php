@@ -5,6 +5,6 @@ class p extends ContainerComponent {
     }
 }
 
-function p(array $args = [], Block ...$children) {
-    return new p($args, ...$children);
+function p(array $attributes = [], Block ...$children) {
+    return new p($attributes, ...$children);
 }

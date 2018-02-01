@@ -1,8 +1,13 @@
 <?php
-function doctype(array $args = [], ...$children) {
-    echo "<!DOCTYPE html>";
 
-    foreach ($children as $child) {
-        $child();
+namespace HTMEl;
+
+class doctype extends StandaloneComponent {
+    function name() {
+        return "!DOCTYPE html";
     }
+}
+
+function doctype() {
+    return new doctype();
 }

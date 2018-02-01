@@ -1,4 +1,7 @@
 <?php
+
+namespace HTMEl;
+
 class ¬Match implements Block {
     function __construct(...$cases) {
         $this->cases = $cases;

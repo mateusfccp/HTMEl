@@ -1,4 +1,7 @@
 <?php
+
+namespace HTMEl;
+
 class ¬Text implements Block {
     function __construct(string $text) {
         $this->text = $text;

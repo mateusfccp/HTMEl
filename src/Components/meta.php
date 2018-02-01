@@ -1,12 +1,13 @@
 <?php
-function meta(array $args = [], ...$children) {
-    return function () use ($args, $children) {
-        echo "<meta";
 
-        foreach ($args as $arg => $value) {
-            echo " {$arg}='{$value}'";
-        }
+namespace HTMEl;
 
-        echo ">";
-    };
+class meta extends ContainerComponent {
+    function name() {
+        return "meta";
+    }
+}
+
+function meta(array $attributes = [], Block ...$children) {
+    return new meta($attributes, ...$children);
 }

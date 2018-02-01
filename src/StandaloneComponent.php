@@ -2,18 +2,17 @@
 
 namespace HTMEl;
 
-abstract class ContainerComponent implements Component {
-    function __construct(array $attributes = [], Block ...$children) {
+abstract class StandaloneComponent implements Component {
+    function __construct(array $attributes = []) {
         $this->args = $attributes;
-        $this->children = $children;
     }
 
     function open() {
-        return "<{$this->name()} {$this->attributes()}>";
+        return "<{$this->name()} {$this->attributes()}";
     }
 
     function close() {
-        return "</{$this->name()}>";
+        return "/>";
     }
 
     function attributes() {
@@ -24,11 +23,6 @@ abstract class ContainerComponent implements Component {
 
     function render() {
         echo $this->open();
-
-        foreach ($this->children as $child) {
-            $child->render();
-        }
-
         echo $this->close();
     }
 }

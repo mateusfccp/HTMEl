@@ -1,12 +1,13 @@
 <?php
-function html(array $args = [], ...$children) {
-    return function () use ($args, $children) {
-        echo "<html>";
-        
-        foreach ($children as $child) {
-            $child();
-        }
 
-        echo "</html>";
-    };
+namespace HTMEl;
+
+class html extends ContainerComponent {
+    function name() {
+        return "html";
+    }
+}
+
+function html(array $attributes = [], Block ...$children) {
+    return new html($attributes, ...$children);
 }
