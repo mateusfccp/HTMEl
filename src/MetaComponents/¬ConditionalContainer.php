@@ -1,5 +1,8 @@
 <?php
-class ¬conditional_container implements Block {
+
+namespace HTMEl;
+
+class ¬ConditionalContainer implements Block {
     function __construct(bool $condition, ContainerComponent $container, ...$children) {
         $this->condition = $condition;
         $this->container = $container;
@@ -19,5 +22,5 @@ class ¬conditional_container implements Block {
 }
 
 function ¬conditional_container(bool $condition, ContainerComponent $container, ...$children) {
-    return new ¬conditional_container($condition, $container, ...$children);
+    return new ¬ConditionalContainer($condition, $container, ...$children);
 }

@@ -1,5 +1,8 @@
 <?php
-class ¬foreach implements Block {
+
+namespace HTMEl;
+
+class ¬ForEach implements Block {
     function __construct(array $iterable, Closure $iteration) {
         $this->iterable = $iterable;
         $this->iteration = $iteration;
@@ -23,5 +26,5 @@ class ¬foreach implements Block {
 }
 
 function ¬foreach(array $iterable, Closure $iteration) {
-    return new ¬foreach($iterable, $iteration);
+    return new ¬ForEach($iterable, $iteration);
 }

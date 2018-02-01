@@ -1,5 +1,8 @@
 <?php
-class ¬if implements Block {
+
+namespace HTMEl;
+
+class ¬If implements Block {
     function __construct(bool $condition, Block $then, Block $else) {
         $this->condition = $condition;
         $this->then = $then;
@@ -16,5 +19,5 @@ class ¬if implements Block {
 }
 
 function ¬if(bool $condition, Block $then, Block $else) : Block {
-    return new ¬if($condition, $then, $else);
+    return new ¬If($condition, $then, $else);
 }

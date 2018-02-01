@@ -1,4 +1,7 @@
 <?php
+
+namespace HTMEl;
+
 abstract class ContainerComponent implements Component {
     function __construct(array $args = [], Block ...$children) {
         $this->args = $args;

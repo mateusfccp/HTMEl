@@ -1,5 +1,5 @@
 <?php
-class ¬text implements Block {
+class ¬Text implements Block {
     function __construct(string $text) {
         $this->text = $text;
     }
@@ -10,5 +10,5 @@ class ¬text implements Block {
 }
 
 function ¬text(string $text) {
-    return new ¬text($text);
+    return new ¬Text($text);
 }

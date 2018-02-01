@@ -1,5 +1,5 @@
 <?php
-class ¬match implements Block {
+class ¬Match implements Block {
     function __construct(...$cases) {
         $this->cases = $cases;
     }
@@ -19,5 +19,5 @@ class ¬match implements Block {
 }
 
 function ¬match(...$cases) {
-    return new ¬match(...$cases);
+    return new ¬Match(...$cases);
 }
