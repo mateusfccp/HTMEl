@@ -6,5 +6,22 @@
         "syntax-sugar"
     ],
     "homepage": "https://github.com/mateusfccp/HTMEl",
-    
+    "license": "GPL-3.0-only",
+    "authors": [
+        {
+            "name": "Mateus Felipe Cordeiro Caetano Pinto",
+            "email": "mateusfccp@gmail.com",
+            "homepage": "https://facebook.com/mateusfccp",
+            "role": "Developer"
+        }
+    ],
+    "support":{
+        "email": "mateusfccp@gmail.com",
+        "source": "https://github.com/mateusfccp/HTMEl"
+    },
+    "autoload": {
+        "psr-4": {
+            "HTMEl\\": "src/"
+        }
+    }
 }
