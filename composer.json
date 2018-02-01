@@ -1,0 +1,10 @@
+{
+    "name": "mateusfccp/htmel",
+    "description": "A library that aims to provide a syntactic sugar for PHP pages that don't use templates.",
+    "keywords": [
+        "rendering",
+        "syntax-sugar"
+    ],
+    "homepage": "https://github.com/mateusfccp/HTMEl",
+    
+}
