@@ -1,6 +1,6 @@
 <?php
 
-namespace HTMEl;
+namespace mateusfccp\HTMEl\MetaComponents;
 
 class ¬ForEach implements Block {
     function __construct(array $iterable, Closure $iteration) {

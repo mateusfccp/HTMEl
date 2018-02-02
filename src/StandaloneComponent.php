@@ -1,6 +1,6 @@
 <?php
 
-namespace HTMEl;
+namespace mateusfccp\HTMEl;
 
 abstract class StandaloneComponent implements Component {
     function __construct(array $attributes = []) {

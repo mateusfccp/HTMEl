@@ -1,6 +1,6 @@
 <?php
 
-namespace HTMEl;
+namespace mateusfccp\HTMEl\MetaComponents;
 
 class ¬Match implements Block {
     function __construct(...$cases) {

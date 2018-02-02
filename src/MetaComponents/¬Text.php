@@ -1,6 +1,6 @@
 <?php
 
-namespace HTMEl;
+namespace mateusfccp\HTMEl\MetaComponents;
 
 class ¬Text implements Block {
     function __construct(string $text) {

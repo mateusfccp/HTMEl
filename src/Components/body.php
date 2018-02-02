@@ -1,6 +1,6 @@
 <?php
 
-namespace HTMEL;
+namespace mateusfccp\HTMEl\Components;
 
 class body extends ContainerComponent {
     function name() {

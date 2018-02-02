@@ -1,4 +1,7 @@
 <?php
+
+namespace mateusfccp\HTMEl\Components;
+
 class p extends ContainerComponent {
     function name() {
         return "p";

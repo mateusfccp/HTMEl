@@ -1,6 +1,6 @@
 <?php
 
-namespace HTMEl;
+namespace mateusfccp\HTMEl\MetaComponents;
 
 class ¬If implements Block {
     function __construct(bool $condition, Block $then, Block $else) {

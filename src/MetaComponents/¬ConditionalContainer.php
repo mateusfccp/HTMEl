@@ -1,6 +1,6 @@
 <?php
 
-namespace HTMEl;
+namespace mateusfccp\HTMEl\MetaComponents;
 
 class ¬ConditionalContainer implements Block {
     function __construct(bool $condition, ContainerComponent $container, ...$children) {
