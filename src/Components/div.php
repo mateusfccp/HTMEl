@@ -2,6 +2,8 @@
 
 namespace mateusfccp\HTMEl\Components;
 
+use mateusfccp\HTMEl;
+
 class div extends ContainerComponent {
     function name() {
         return "div";
