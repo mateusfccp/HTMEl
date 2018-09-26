@@ -3,26 +3,26 @@
 namespace mateusfccp\HTMEl;
 
 abstract class ContainerComponent implements Component {
-    function __construct(array $attributes = [], Block ...$children) {
+    protected function __construct(array $attributes = [], Component ...$children) {
         $this->args = $attributes;
         $this->children = $children;
     }
 
-    function open() {
+    protected function open() {
         return "<{$this->name()} {$this->attributes()}>";
     }
 
-    function close() {
+    protected function close() {
         return "</{$this->name()}>";
     }
 
-    function attributes() {
+    protected function attributes() {
         return array_reduce(array_keys($this->args), function ($carry, $item) {
             return $carry . "{$item}='{$this->args[$item]}' ";
         }, "");
     }
 
-    function render() {
+    public function render() {
         echo $this->open();
 
         foreach ($this->children as $child) {
@@ -30,5 +30,9 @@ abstract class ContainerComponent implements Component {
         }
 
         echo $this->close();
+    }
+
+    public static function do(...$args) {
+        return new static(...$args);
     }
 }

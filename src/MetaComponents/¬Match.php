@@ -2,12 +2,12 @@
 
 namespace mateusfccp\HTMEl\MetaComponents;
 
-class ¬Match implements Block {
-    function __construct(...$cases) {
+class ¬Match extends \mateusfccp\HTMEl\MetaComponent {
+    protected function __construct(...$cases) {
         $this->cases = $cases;
     }
 
-    function render() {
+    public function render() {
         foreach ($this->cases as $case) {
             if (false /*typeof $block !== Block*/) {
                 throw new Error("Your case array itens should follow the pattern \" bool => Block\"");
@@ -19,8 +19,4 @@ class ¬Match implements Block {
             }
         }
     }
-}
-
-function ¬match(...$cases) {
-    return new ¬Match(...$cases);
 }

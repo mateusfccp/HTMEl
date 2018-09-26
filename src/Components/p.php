@@ -2,12 +2,10 @@
 
 namespace mateusfccp\HTMEl\Components;
 
+use mateusfccp\HTMEl\ContainerComponent;
+
 class p extends ContainerComponent {
-    function name() {
+    protected function name() {
         return "p";
     }
-}
-
-function p(array $attributes = [], Block ...$children) {
-    return new p($attributes, ...$children);
 }

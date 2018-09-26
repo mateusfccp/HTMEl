@@ -2,16 +2,12 @@
 
 namespace mateusfccp\HTMEl\MetaComponents;
 
-class ¬Text implements Block {
-    function __construct(string $text) {
+class ¬Text extends \mateusfccp\HTMEl\MetaComponent {
+    protected function __construct(string $text) {
         $this->text = $text;
     }
 
-    function render() {
+    public function render() {
         echo $this->text;
     }
-}
-
-function ¬text(string $text) {
-    return new ¬Text($text);
 }

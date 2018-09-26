@@ -3,26 +3,30 @@
 namespace mateusfccp\HTMEl;
 
 abstract class StandaloneComponent implements Component {
-    function __construct(array $attributes = []) {
+    protected function __construct(array $attributes = []) {
         $this->args = $attributes;
     }
 
-    function open() {
+    protected function open() {
         return "<{$this->name()} {$this->attributes()}";
     }
 
-    function close() {
+    protected function close() {
         return "/>";
     }
 
-    function attributes() {
+    protected function attributes() {
         return array_reduce(array_keys($this->args), function ($carry, $item) {
             return $carry . "{$item}='{$this->args[$item]}' ";
         }, "");
     }
 
-    function render() {
+    public function render() {
         echo $this->open();
         echo $this->close();
+    }
+
+    public static function do(...$args) {
+        return new static(...$args);
     }
 }

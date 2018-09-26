@@ -2,14 +2,14 @@
 
 namespace mateusfccp\HTMEl\MetaComponents;
 
-class ¬ForEach implements Block {
-    function __construct(array $iterable, Closure $iteration) {
+class ¬ForEach extends \mateusfccp\HTMEl\MetaComponent {
+    protected function __construct(iterable $iterable, \Closure $iteration) {
         $this->iterable = $iterable;
         $this->iteration = $iteration;
     }
 
-    function render() {
-        $count = 2;
+    public function render() {
+        $count = (new \ReflectionFunction($this->iteration))->getNumberOfParameters();
 
         if ($count === 1) {
             foreach ($this->iterable as $item) {
@@ -17,14 +17,10 @@ class ¬ForEach implements Block {
             }
         } elseif ($count === 2) {
             foreach ($this->iterable as $key => $value) {
-                ($this->iteration)($key, $value)->render();
+                ($this->iteration)($value, $key)->render();
             }
         } else {
-            throw new Error("You should provide a Closure with one or two params!");
+            throw new Error("You must provide a function with 1 or 2 params!");
         }
     }
-}
-
-function ¬foreach(array $iterable, Closure $iteration) {
-    return new ¬ForEach($iterable, $iteration);
 }
